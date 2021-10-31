@@ -91,5 +91,20 @@ float Triangle::area()
     float semiPerimeter = this->perimeter() / 2;
     return  sqrtf(semiPerimeter * (semiPerimeter - this->lineLength(1)) * (semiPerimeter - this->lineLength(2) * (semiPerimeter - this->lineLength(3)))); //Формула Герона
 }
+
+Point Triangle::getFirstPoint()
+{
+    return this->firstPoint;
+}
+
+Point Triangle::getSecondPoint()
+{
+    return this->secondPoint;
+}
+
+Point Triangle::getThirdPoint()
+{
+    return this->thirdPoint;
+}
  
 
