@@ -23,7 +23,7 @@ bool Point::input()
 		return true;
 	}
 
-	else return false;
+	else return false; 
 }
 
 void Point::output()
