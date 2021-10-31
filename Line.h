@@ -8,7 +8,8 @@ private:
 
 public:
 	Line();
-	Line(Point start, Point end);
+
+	bool init(Point start, Point end);
 
 	bool input();
 

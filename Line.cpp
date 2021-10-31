@@ -6,20 +6,20 @@ Line::Line()
 {
 }
 
-Line::Line(Point start, Point end)
+bool Line::init(Point start, Point end)
 {
+	if (&start == nullptr || &end == nullptr) return false;
 	this->startPoint = start;
 	this->endPoint = end;
+
+	return true;
 }
 
 bool Line::input()
 {
 	Point start, end;
 
-	if (start.input() && end.input()) {
-		this->startPoint = start;
-		this->endPoint = end;
-	}
+	if (start.input() && end.input()) this->init(start, end);
 
 	return false;
 }
