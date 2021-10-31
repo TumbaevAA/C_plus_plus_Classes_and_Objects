@@ -7,12 +7,12 @@ int main()
     //Тест Point
     Point firstPoint(0, 0), secondPoint;
     cout << "Point test"<< endl << "Enter the coordinates of the second point: ";
-    secondPoint.Input();
+    secondPoint.input();
     cout << "\nThe coordinates of the first point: ";
-    firstPoint.Output();
+    firstPoint.output();
     cout << "\nThe coordinates of the second point: ";
-    secondPoint.Output();
-    cout << "\nDistance between points: " << firstPoint.PointDistance(secondPoint);
+    secondPoint.output();
+    cout << "\nDistance between points: " << firstPoint.distance(secondPoint);
 
 
     return 0;

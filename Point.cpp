@@ -13,7 +13,7 @@ Point::Point(float x, float y)
 	this->y = y;
 }
 
-bool Point::Input()
+bool Point::input()
 {
 	float x, y;
 	if (cin >> x >> y) {
@@ -26,12 +26,12 @@ bool Point::Input()
 	else return false;
 }
 
-void Point::Output()
+void Point::output()
 {
 	cout << "x = " << this->x << ", y = " << this->y;
 }
 
-float Point::PointDistance(Point end)
+float Point::distance(Point end)
 {
 	if (&end == nullptr) return -1;
 
@@ -39,12 +39,12 @@ float Point::PointDistance(Point end)
 	return sqrt(d1 * d1 + d2 * d2);
 }
 
-float Point::GetX()
+float Point::getX()
 {
 	return this->x;
 }
 
-float Point::GetY()
+float Point::getY()
 {
 	return this->y;
 }

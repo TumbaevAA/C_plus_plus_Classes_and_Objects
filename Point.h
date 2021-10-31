@@ -8,15 +8,15 @@ public:
 	Point();
 	Point(float x, float y);
 
-	bool Input();
+	bool input();
 
-	void Output();
+	void output();
 
-	float PointDistance(Point end);
+	float distance(Point end);
 
-	float GetX();
+	float getX();
 
-	float GetY();
+	float getY();
 
 };
 
