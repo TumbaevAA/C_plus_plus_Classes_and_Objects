@@ -19,5 +19,10 @@ public:
 	float perimeter();
 
 	float area();
+
+	Point getFirstPoint();
+	Point getSecondPoint();
+	Point getThirdPoint();
+	Point getFourthPoint();
 };
 

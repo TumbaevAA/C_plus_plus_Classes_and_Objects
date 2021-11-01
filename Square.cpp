@@ -74,4 +74,24 @@ float Square::area()
     return this->lineLength()*this->lineLength();
 }
 
+Point Square::getFirstPoint()
+{
+    return this->firstPoint;
+}
+
+Point Square::getSecondPoint()
+{
+    return this->secondPoint;
+}
+
+Point Square::getThirdPoint()
+{
+    return this->thirdPoint;
+}
+
+Point Square::getFourthPoint()
+{
+    return this->fourthPoint;
+}
+
 
