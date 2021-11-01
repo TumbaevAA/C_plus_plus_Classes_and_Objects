@@ -69,6 +69,34 @@ int main()
 
     circle.output();
 
+    
+    //Создание динамического массива объектов класса Point
+    int n;
+
+    cout << "\n\nCreating a dynamic array of objects of the Point class\n";
+    cout << "Enter array length: ";
+    cin >> n;
+
+    Point* arr = new Point[n];
+
+    for (int i = 0; i < n; i++) {
+        cout << "\nEnter the coordinates of the " << i << " point: ";
+        arr[i].input();
+
+        cin.clear();
+        while (cin.get() != '\n');
+    }
+
+    cout << "\n\nPoints in dynamic array:";
+    for (int i = 0; i < n; i++){
+        cout << "\n";
+        arr[i].output();
+    }
+
+    delete[] arr;
+
+
+
     return 0;
 }
 
