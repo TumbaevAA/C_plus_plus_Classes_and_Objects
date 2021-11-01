@@ -2,6 +2,7 @@
 #include "Point.h"
 #include "Line.h"
 #include "Triangle.h"
+#include "Square.h"
 using namespace std;
 
 int main()
@@ -34,6 +35,7 @@ int main()
     line.output();
 
 
+
     //Тест Triangle
     Triangle triangle;
     cout << "\n\n\nTriangle test" << endl << "Enter the coordinates of the first, the second and the third points: ";
@@ -43,6 +45,18 @@ int main()
     while (cin.get() != '\n');
 
     triangle.output();
+
+
+
+    //Тест Square
+    Square square;
+    cout << "\n\n\Square test" << endl << "Enter the coordinates of the first, the second, the third and the fourth points: ";
+    square.input();
+
+    cin.clear();
+    while (cin.get() != '\n');
+
+    square.output();
 
 
     return 0;
