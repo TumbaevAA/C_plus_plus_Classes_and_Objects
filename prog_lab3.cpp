@@ -3,6 +3,7 @@
 #include "Line.h"
 #include "Triangle.h"
 #include "Square.h"
+#include "Circle.h"
 using namespace std;
 
 int main()
@@ -58,6 +59,15 @@ int main()
 
     square.output();
 
+    //Тест Circle
+    Circle circle;
+    cout << "\n\n\Circle test" << endl << "Enter the coordinates of the center and the radius: ";
+    circle.input();
+
+    cin.clear();
+    while (cin.get() != '\n');
+
+    circle.output();
 
     return 0;
 }
