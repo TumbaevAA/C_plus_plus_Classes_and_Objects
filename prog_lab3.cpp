@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <string>
 #include "Point.h"
 #include "Line.h"
 using namespace std;
@@ -58,5 +59,24 @@ int main()
 	sum.output();
 
 
+
+	//Конкатенация строк
+	cout << "\n\n\nString processing\n";
+	string s1 = "hello", s2 = "world";
+	string s3 = s1 + " " + s2;
+	cout << s3;
+
+	//Вставка
+	s3.insert(6, "beautiful ");
+	cout << "\n" << s3 << "\n";
+
+	//Удаление
+	s3.erase(6, 10);
+	cout << "\n" << s3 << "\n";
+
+	//Сравнение
+	if (s1 != s2) {
+		cout  << s1 << " and " << s2 << " aren't equal\n";
+	}
 }
 
