@@ -18,5 +18,7 @@ public:
 
 	float getY();
 
+
+	bool friend setPointCoordinates(Point& p, float x, float y);
 };
 
