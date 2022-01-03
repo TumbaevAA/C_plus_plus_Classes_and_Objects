@@ -41,5 +41,22 @@ int main()
 	setPointCoordinates(p, 4, 5);
 	cout << "\n";
 	p.output();
+
+	//Операторы + и ++
+	cout << "\n\n\n+ and ++ operators\n";
+	Point p1(0, 0);
+	p1.output();
+	cout << "\n";
+	p1++;
+	p1.output();
+	cout << "\n";
+	++p1;
+	p1.output();
+	cout << "\n";
+	Point sum;
+	sum = p + p1;
+	sum.output();
+
+
 }
 

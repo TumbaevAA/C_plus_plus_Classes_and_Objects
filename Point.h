@@ -20,5 +20,10 @@ public:
 
 
 	bool friend setPointCoordinates(Point& p, float x, float y);
+
+	Point& operator++();    //префиксный оператор
+	Point operator++(int);  //постфиксный оператор
+	Point operator +(Point& p);
+
 };
 

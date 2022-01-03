@@ -48,3 +48,25 @@ float Point::getY()
 {
 	return this->y;
 }
+
+Point& Point::operator++()
+{
+	x++;
+	y++;
+	return *this;
+}
+
+Point Point::operator++(int)
+{
+	Point p = *this;
+	++* this;
+	return p;
+}
+
+Point Point::operator+(Point& p)
+{
+	Point rez(this->x+p.x,this->y+p.y);
+	return rez;
+}
+
+	 
