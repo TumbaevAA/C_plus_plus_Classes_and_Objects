@@ -48,3 +48,9 @@ float Point::getY()
 {
 	return this->y;
 }
+
+float Point::distanceToOrigin(Point p)
+{
+	Point origin(0, 0);
+	return origin.distance(p);
+}

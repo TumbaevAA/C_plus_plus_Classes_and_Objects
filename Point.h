@@ -18,5 +18,6 @@ public:
 
 	float getY();
 
+	static float distanceToOrigin(Point p);
 };
 
