@@ -3,8 +3,11 @@ class Point
 {
 private:
 	float x, y;
+	int id;
+	static int count;
 
 public:
+
 	Point();
 	Point(float x, float y);
 

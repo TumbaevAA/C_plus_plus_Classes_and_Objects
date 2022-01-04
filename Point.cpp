@@ -5,10 +5,14 @@ using namespace std;
 
 Point::Point()
 {
+	count++;
+	this->id = count;
 }
 
 Point::Point(float x, float y)
 {
+	count++;
+	this->id = count;
 	this->x = x;
 	this->y = y;
 }
@@ -28,7 +32,7 @@ bool Point::input()
 
 void Point::output()
 {
-	cout << "x = " << this->x << ", y = " << this->y;
+	cout << "x = " << this->x << ", y = " << this->y << ", id = " << this->id;
 }
 
 float Point::distance(Point end)
@@ -48,6 +52,8 @@ float Point::getY()
 {
 	return this->y;
 }
+
+
 
 float Point::distanceToOrigin(Point p)
 {
