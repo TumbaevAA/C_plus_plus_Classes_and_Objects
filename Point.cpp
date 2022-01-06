@@ -3,10 +3,19 @@
 #include <cmath>
 using namespace std;
 
+
 Point::Point()
 {
 	count++;
 	this->id = count;
+}
+
+/* id нельзя назначать через праметр.
+Конструктор только демонстрирует работу конструктора
+с одним параметром*/
+Point::Point(int id)
+{
+	this->id = id;
 }
 
 Point::Point(float x, float y)

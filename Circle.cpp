@@ -13,6 +13,8 @@ bool Circle::init(Point center, float radius)
 
     this->center = center;
     this->radius = radius;
+
+    return true;
 }
 
 bool Circle::input()

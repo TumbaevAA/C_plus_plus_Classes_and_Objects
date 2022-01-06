@@ -9,6 +9,7 @@ private:
 public:
 
 	Point();
+	Point(int id);
 	Point(float x, float y);
 
 	bool input();
