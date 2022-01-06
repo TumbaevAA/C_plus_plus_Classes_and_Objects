@@ -39,5 +39,26 @@ int main()
 
     delete pDynamic2;
 
+    cout << "\n\n\nLine costructor test\n";
+    Line l(p, p1), l1;
+    l.output();
+    cout << "\n";
+    cout << "Enter start and end points of the line\n";
+    l1.input();
+    l1.output();
+    cout << "\n";
+
+    cout << "\nDynamic Line constructor test\n";
+    Line *lDynamic = new Line(*pDynamic, *pDynamic1), *lDynamic1 = new Line();
+    lDynamic->output();
+    cout << "\n";
+    cout << "Enter start and end points of the line\n";
+    lDynamic1->input();
+    lDynamic1->output();
+    cout << "\n";
+    
+    delete lDynamic, lDynamic1, pDynamic, pDynamic1;
+
+
     system("pause");
 }
