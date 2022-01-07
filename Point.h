@@ -11,6 +11,7 @@ public:
 	Point();
 	Point(int id);
 	Point(float x, float y);
+	Point(const Point& p);
 
 	bool input();
 

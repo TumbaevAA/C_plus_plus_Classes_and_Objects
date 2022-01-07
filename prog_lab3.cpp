@@ -10,6 +10,15 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    //Конструктор копирования
+    cout << "\n\n\Copy costructor for Point\n";
+    Point point(3, 7), pointCopy(point);
+    point.output();
+    cout << "\n";
+    pointCopy.output();
+    
+
+
     cout << "\n\n\nCircle costructor test\n";
     Point center(0,0);
     Circle c(center, 5), c1;

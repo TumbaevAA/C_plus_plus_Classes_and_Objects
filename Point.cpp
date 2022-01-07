@@ -26,6 +26,14 @@ Point::Point(float x, float y)
 	this->y = y;
 }
 
+Point::Point(const Point& p)
+{
+	this->x = p.x;
+	this->y = p.y;
+	count++;
+	this->id = count;
+}
+
 bool Point::input()
 {
 	float x, y;
