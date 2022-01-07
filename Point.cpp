@@ -34,6 +34,14 @@ Point::Point(const Point& p)
 	this->id = count;
 }
 
+Point& Point::operator=(const Point& p)
+{
+	this->x = p.x;
+	this->y = p.y;
+
+	return *this;
+}
+
 bool Point::input()
 {
 	float x, y;

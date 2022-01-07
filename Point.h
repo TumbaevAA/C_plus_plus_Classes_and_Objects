@@ -12,6 +12,7 @@ public:
 	Point(int id);
 	Point(float x, float y);
 	Point(const Point& p);
+	Point& operator = (const Point& p);
 
 	bool input();
 

@@ -10,15 +10,19 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    //Оператор присваивания
+    cout << "\n\n\n= operator overload\n";
+    Point pOperator(5, 5), pOperator1;
+    pOperator1 = pOperator;
+    pOperator1.output();
+
     //Конструктор копирования
-    cout << "\n\n\Copy costructor for Point\n";
+    cout << "\n\n\nCopy costructor for Point\n";
     Point point(3, 7), pointCopy(point);
     point.output();
     cout << "\n";
     pointCopy.output();
     
-
-
     cout << "\n\n\nCircle costructor test\n";
     Point center(0,0);
     Circle c(center, 5), c1;
