@@ -10,6 +10,23 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    cout << "\n\n\Square costructor test\n";
+    Point pForSquare(0, 0), pForSquare1(1, 0), pForSquare2(1, 1), pForSquare3(0, 1);
+    Square s(pForSquare, pForSquare1, pForSquare2, pForSquare3), s1;
+    s.output();
+    cout << "\nEnter first, second, third, fourth points of the square\n";
+    s1.input();
+    s1.output();
+
+    cout << "\n\nDynamic Square costructor test\n";
+    Square* sDynamic = new Square(pForSquare, pForSquare1, pForSquare2, pForSquare3), * sDynamic1 = new Square();
+    sDynamic->output();
+    cout << "\nEnter first, second, third, fourth points of the dynamic square\n";
+    sDynamic1->input();
+    sDynamic1->output();
+    
+    delete sDynamic, sDynamic1;
+
     cout << "\n\n\nTriangle costructor test\n";
     Point pForTriangle(0, 0), pForTriangle1(1, 0), pForTriangle2(0, 1);
     Triangle t(pForTriangle, pForTriangle1, pForTriangle2), t1;
@@ -26,8 +43,6 @@ int main()
     tDynamic1->output();
 
     delete tDynamic, tDynamic1;
-
-
 
 
 

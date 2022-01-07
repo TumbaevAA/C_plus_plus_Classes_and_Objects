@@ -8,7 +8,7 @@ private:
 public:
 	Square();
 
-	bool init(Point first, Point second, Point third, Point fourth);
+	Square(Point first, Point second, Point third, Point fourth);
 
 	bool input();
 
