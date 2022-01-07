@@ -9,7 +9,7 @@ private:
 public:
 	Triangle();
 
-	bool init(Point first, Point second, Point third);
+	Triangle(Point first, Point second, Point third);
 
 	bool input();
 

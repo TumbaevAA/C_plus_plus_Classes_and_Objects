@@ -10,7 +10,28 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
-    cout << "Point costructor test\n";
+    cout << "\n\n\nTriangle costructor test\n";
+    Point pForTriangle(0, 0), pForTriangle1(1, 0), pForTriangle2(0, 1);
+    Triangle t(pForTriangle, pForTriangle1, pForTriangle2), t1;
+    t.output();
+    cout << "\nEnter first, second and third points of the triangle\n";
+    t1.input();
+    t1.output();
+
+    cout << "\n\nDynamic Triangle costructor test\n";
+    Triangle* tDynamic = new Triangle(pForTriangle, pForTriangle1, pForTriangle2), * tDynamic1 = new Triangle();
+    tDynamic->output();
+    cout << "\nEnter first, second and third points of the dynamic triangle\n";
+    tDynamic1->input();
+    tDynamic1->output();
+
+    delete tDynamic, tDynamic1;
+
+
+
+
+
+    cout << "\n\n\nPoint costructor test\n";
     Point p(3, 4), p1(1234), p2;
     p.output();
     cout << "\n";
@@ -58,6 +79,7 @@ int main()
     cout << "\n";
     
     delete lDynamic, lDynamic1, pDynamic, pDynamic1;
+
 
 
     system("pause");
