@@ -9,8 +9,7 @@ private:
 public:
 	Circle();
 
-
-	bool init(Point center, float radius);
+	Circle(Point center, float radius);
 
 	bool input();
 

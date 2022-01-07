@@ -10,7 +10,26 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
-    cout << "\n\n\Square costructor test\n";
+    cout << "\n\n\nCircle costructor test\n";
+    Point center(0,0);
+    Circle c(center, 5), c1;
+    c.output();
+    cout << "\nEnter center and radius of the circle\n";
+    c1.input();
+    c1.output();
+
+    cout << "\n\nDynamic Circle costructor test\n";
+    Circle* cDynamic = new Circle(center, 5), * cDynamic1 = new Circle();
+    cDynamic->output();
+    cout << "\nEnter center and radius of the dynamic circle\n";
+    cDynamic1->input();
+    cDynamic1->output();
+
+    delete cDynamic, cDynamic1;
+
+
+
+    cout << "\n\n\nSquare costructor test\n";
     Point pForSquare(0, 0), pForSquare1(1, 0), pForSquare2(1, 1), pForSquare3(0, 1);
     Square s(pForSquare, pForSquare1, pForSquare2, pForSquare3), s1;
     s.output();

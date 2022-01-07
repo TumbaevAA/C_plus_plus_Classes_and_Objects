@@ -7,21 +7,22 @@ Circle::Circle()
 {
 }
 
-bool Circle::init(Point center, float radius)
+Circle::Circle(Point center, float radius)
 {
-    if (&center == nullptr && &radius == nullptr) return false;
-
     this->center = center;
     this->radius = radius;
-
-    return true;
 }
 
 bool Circle::input()
 {
     Point center;
     float radius;
-    if (center.input() && cin >> radius) this->init(center, radius);
+    if (center.input() && cin >> radius) {
+        this->center = center;
+        this->radius = radius;
+
+        return true;
+    }
 
     return false;
 }
