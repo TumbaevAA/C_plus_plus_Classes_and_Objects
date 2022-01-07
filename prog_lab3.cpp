@@ -10,6 +10,17 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    //Инициализация массива
+    cout << "\n\n\nArray init\n";
+    Point arr[] = {Point(2343), Point(9087)};
+    for  (int i = 0; i < 2; i++)
+    {
+        cout << "\nEnter coordinates of the point\n";
+        arr[i].input();
+        cout << "\n";
+        arr[i].output();
+    }
+
     //Оператор присваивания
     cout << "\n\n\n= operator overload\n";
     Point pOperator(5, 5), pOperator1;
