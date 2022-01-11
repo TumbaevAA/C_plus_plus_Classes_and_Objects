@@ -12,27 +12,40 @@ Triangle::Triangle(Point first, Point second, Point third)
     float d1 = first.distance(second), d2 = second.distance(third), d3 = third.distance(first);
 
     if (d1 == 0 || d2 == 0 || d3 == 0 ||                      //Если какие-то точки совпадают, не инициализируем
-        d1 == d2 + d3 || d2 == d1 + d3 || d3 == d1 + d2) {}   //Если точка лежит на отрезке между двумя другими - не инициализируем
+        d1 == d2 + d3 || d2 == d1 + d3 || d3 == d1 + d2) {    //Если точка лежит на отрезке между двумя другими - не инициализируем
+    
+        throw "Wrong arguments";
+    }   
     else {
         this->firstPoint = first;
         this->secondPoint = second;
         this->thirdPoint = third;
     }
 }
-
-
 bool Triangle::input()
 {
-    Point first, second, third;
-    if (first.input() && second.input() && third.input()) {
-        this->firstPoint = first;
-        this->secondPoint = second;
-        this->thirdPoint = third;
+    try {
+        Point first, second, third;
+        if (first.input() && second.input() && third.input()) {
+            this->firstPoint = first;
+            this->secondPoint = second;
+            this->thirdPoint = third;
 
-        return true;
+            float d1 = first.distance(second), d2 = second.distance(third), d3 = third.distance(first);
+
+            if (d1 == 0 || d2 == 0 || d3 == 0 ||                      //Если какие-то точки совпадают, не инициализируем
+                d1 == d2 + d3 || d2 == d1 + d3 || d3 == d1 + d2) {    //Если точка лежит на отрезке между двумя другими - не инициализируем
+
+                throw "Wrong arguments";
+            }
+
+            return true;
+        }
     }
-
-    return false;
+    catch (const char* e) {
+        cout << e << endl;
+        return false;
+    }
 }
 
 void Triangle::output()
@@ -61,7 +74,7 @@ void Triangle::output()
 
 float Triangle::lineLength(int lineNumber)
 {
-    if (lineNumber < 1 || lineNumber>3) return -1;
+    if (lineNumber < 1 || lineNumber>3)  throw "Wrong line number";
 
     switch (lineNumber) {
     case 1:
