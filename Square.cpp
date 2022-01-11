@@ -13,29 +13,44 @@ Square::Square(Point first, Point second, Point third, Point fourth)
 
     if (d1 == 0 || d2 == 0 || d3 == 0 || d4 == 0 ||                                           //≈сли какие-то точки совпадают, не инициализируем
         first.distance(third) == 0 || second.distance(fourth) == 0 ||
-        d1 != d2 || d1 != d3 || d1 != d4 || d2 != d3 || d2 != d4 || d3 != d4) {}               //≈сли стороны не равны, не инициализируем
+        d1 != d2 || d1 != d3 || d1 != d4 || d2 != d3 || d2 != d4 || d3 != d4) {              //≈сли стороны не равны, не инициализируем
+    
+        throw "Wrong arguments";
+    }               
     else {
         this->firstPoint = first;
         this->secondPoint = second;
         this->thirdPoint = third;
         this->fourthPoint = fourth;
     }
-
 }
 
 bool Square::input()
 {
-    Point first, second, third, fourth;
-    if (first.input() && second.input() && third.input() && fourth.input()) {
-        this->firstPoint = first;
-        this->secondPoint = second;
-        this->thirdPoint = third;
-        this->fourthPoint = fourth;
+    try {
+        Point first, second, third, fourth;
+        if (first.input() && second.input() && third.input() && fourth.input()) {
+            this->firstPoint = first;
+            this->secondPoint = second;
+            this->thirdPoint = third;
+            this->fourthPoint = fourth;
 
-        return true;
+            float d1 = first.distance(second), d2 = second.distance(third), d3 = third.distance(fourth), d4 = fourth.distance(first);
+
+            if (d1 == 0 || d2 == 0 || d3 == 0 || d4 == 0 ||                                           //≈сли какие-то точки совпадают, не инициализируем
+                first.distance(third) == 0 || second.distance(fourth) == 0 ||
+                d1 != d2 || d1 != d3 || d1 != d4 || d2 != d3 || d2 != d4 || d3 != d4) {              //≈сли стороны не равны, не инициализируем
+
+                throw "Wrong arguments";
+            }
+
+            return true;
+        }
     }
-
-    return false;
+    catch (const char* e) {
+        cout << e << endl;
+        return false;
+    }
 }
 
 void Square::output()

@@ -10,6 +10,17 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    //Тест Square 
+    try {
+        Point pForSquare(0, 0);
+        Square s(pForSquare, pForSquare, pForSquare, pForSquare);
+    }
+    catch (const char* e) {
+        cout << e << endl;
+    }
+    Square s1;
+    s1.input();
+
     //Тест Triangle
     Point pForTriangle(0, 0), pForTriangle1(1, 0), pForTriangle2(0, 1);
     try {
