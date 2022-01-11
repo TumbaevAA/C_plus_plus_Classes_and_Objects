@@ -14,15 +14,19 @@ Line::Line(Point start, Point end)
 
 bool Line::input()
 {
-	Point start, end;
+	try {
+		Point start, end;
 
-	if (start.input() && end.input()) {
+		start.input();
+		end.input();
 		this->startPoint = start;
 		this->endPoint = end;
 		return true;
 	}
-
-	return false;
+	catch(const char* e){
+		cout << e << endl;
+		return false;
+	}
 }
 
 void Line::output()
@@ -50,7 +54,7 @@ bool Line::isPointOnLine(Point point)
 	return false;
 }
 
-Point Line::getStartPiont()
+Point Line::getStartPoint()
 {
 	return this->startPoint;
 }

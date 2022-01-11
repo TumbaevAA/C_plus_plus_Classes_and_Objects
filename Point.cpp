@@ -52,7 +52,9 @@ bool Point::input()
 		return true;
 	}
 
-	else return false; 
+	else {
+		throw "Invalid input";
+	}
 }
 
 void Point::output()

@@ -19,7 +19,7 @@ public:
 
 	bool isPointOnLine(Point point);
 
-	Point getStartPiont();
+	Point getStartPoint();
 
 	Point getEndPoint();
 };
