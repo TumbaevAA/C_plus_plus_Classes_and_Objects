@@ -9,6 +9,8 @@ Circle::Circle()
 
 Circle::Circle(Point center, float radius)
 {
+    if (radius < 0) throw "Radius less than zero";
+
     this->center = center;
     this->radius = radius;
 }
@@ -17,14 +19,20 @@ bool Circle::input()
 {
     Point center;
     float radius;
-    if (center.input() && cin >> radius) {
-        this->center = center;
-        this->radius = radius;
+    try {
+        if (center.input() && cin >> radius && radius >= 0) {
+            this->center = center;
+            this->radius = radius;
 
-        return true;
+            return true;
+        }
+        else {
+            throw "Invalid input";
+        }
     }
-
-    return false;
+    catch (const char* e) {
+        cout << e << endl;
+    }
 }
 
 void Circle::output()

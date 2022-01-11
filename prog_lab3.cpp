@@ -10,6 +10,19 @@ using namespace std;
 int Point::count = 0;
 int main()
 {
+    //Тест Circle
+    try {
+        Point p(0, 0);
+        Circle c(p, -1);
+    }
+    catch (const char* e) {
+        cout << e << endl;
+    }
+
+    Circle c1;
+    c1.input();
+
+
     //Тест Square 
     try {
         Point pForSquare(0, 0);
