@@ -13,6 +13,10 @@ int main()
 {
     Point center(0, 0);
 
+    Circle c1("new circle");
+
+    cout << c1.getDescription() << endl;
+
     ColorCircle colorCircle(center, 4, "white");
 
     colorCircle.output();

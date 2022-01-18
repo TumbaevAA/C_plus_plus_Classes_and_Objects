@@ -1,6 +1,8 @@
 #pragma once
+#include "GeometricFigure.h"
 #include "Point.h"
-class Circle
+
+class Circle : public GeometricFigure
 {
 protected:
 	Point center;
@@ -8,6 +10,8 @@ protected:
 
 public:
 	Circle();
+
+	Circle(string description);
 
 	Circle(Point center, float radius);
 

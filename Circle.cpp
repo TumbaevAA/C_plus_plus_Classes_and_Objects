@@ -7,6 +7,10 @@ Circle::Circle()
 {
 }
 
+Circle::Circle(string description):GeometricFigure(description)
+{
+}
+
 Circle::Circle(Point center, float radius)
 {
     if (radius < 0) throw "Radius less than zero";
