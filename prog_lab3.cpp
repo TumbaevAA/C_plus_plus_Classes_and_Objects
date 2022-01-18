@@ -5,30 +5,24 @@
 #include "Triangle.h"
 #include "Square.h"
 #include "Circle.h"
+#include "ColorCircle.h"
 using namespace std;
 
 int Point::count = 0;
 int main()
 {
-    Point twoDimensionalArray[2][3];
+    Point center(0, 0);
 
-    for (int i = 0; i < 2; i++)
-        for (int j = 0; j < 3; j++) {
-            cout << "\nEnter coordinates of the " << j << " point in the " << i << " row" << endl;
+    ColorCircle colorCircle(center, 4, "white");
 
-            twoDimensionalArray[i][j].input();
-            twoDimensionalArray[i][j].output();
-        }
+    colorCircle.output();
 
+    Circle& circle = colorCircle;
 
-    Point pointArray[3];
+    cout << endl;
+    circle.output();
+   
 
-    for (int i = 0; i < 3; i++) {
-        cout << "\nEnter coordinates of the " << i << " point" << endl;
-        pointArray[i].input();
-        pointArray[i].output();
-    }
-    
     cout << endl;
     system("pause");
 }
